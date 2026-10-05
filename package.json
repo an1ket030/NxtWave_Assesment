@@ -1,0 +1,25 @@
+{
+  "name": "nxtwave",
+  "version": "1.0.0",
+  "description": "## \"Build Your First AI Project in 60 Minutes\" ### Goal: 500 final-year engineering student registrations · Budget: Rs.2,000 · 7 Days",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/an1ket030/NxtWave_Assesment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/an1ket030/NxtWave_Assesment/issues"
+  },
+  "homepage": "https://github.com/an1ket030/NxtWave_Assesment#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

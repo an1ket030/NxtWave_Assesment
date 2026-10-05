@@ -3,291 +3,293 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build Your First AI Project in 60 Minutes — NxtWave</title>
-  <meta name="description" content="Join 500+ final-year engineering students. Build a working AI project in 60 minutes. Free workshop. Add it to your resume today." />
+  <title>Build Your First AI Project in 60 Minutes — NxtWave Growth Challenge</title>
+  <meta name="description" content="Join 500+ final-year engineering students. Build & deploy a real AI project in 60 minutes. Free live workshop. Add a working GitHub link to your resume today." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ─── NAV ─── -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <div class="nav-logo">
-        <span class="logo-dot"></span>
-        <span>NxtWave</span>
-      </div>
-      <div class="nav-badge">Free Workshop · 60 min</div>
+  <!-- ─── SYSTEM STATUS BAR ─── -->
+  <div class="system-status-bar">
+    <div class="status-pill">
+      <span class="status-indicator pulse" id="backend-status-indicator"></span>
+      <span id="backend-status-text">Growth Engine API Active • Node.js Fullstack</span>
     </div>
-  </nav>
-
-  <!-- ─── HERO ─── -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
-
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-pill" id="live-count-pill">
-          <span class="pulse-dot"></span>
-          <span id="live-count-text">Loading registrations…</span>
-        </div>
-
-        <h1 class="hero-title">
-          Build a Real<br/>
-          <span class="gradient-text">AI Project</span><br/>
-          in 60 Minutes.
-        </h1>
-
-        <p class="hero-sub">
-          One workshop. One working project. One line on your resume that actually means something — built by you, not watched on YouTube.
-        </p>
-
-        <div class="hero-meta">
-          <span class="meta-chip">✦ 100% Free</span>
-          <span class="meta-chip">✦ No prior AI experience needed</span>
-          <span class="meta-chip">✦ Certificate included</span>
-        </div>
-
-        <div class="hero-cta-group">
-          <button class="btn-primary" id="hero-cta" onclick="openModal('register')">
-            Build My AI Project →
-          </button>
-          <button class="btn-ghost" onclick="document.getElementById('what-you-build').scrollIntoView({behavior:'smooth'})">
-            See what you'll build ↓
-          </button>
-        </div>
-
-        <div class="urgency-strip">
-          <span class="fire">🔥</span>
-          <span id="spots-left">Calculating spots…</span>
-        </div>
-      </div>
-
-      <!-- Hero visual -->
-      <div class="hero-visual">
-        <div class="code-window">
-          <div class="code-window-bar">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="code-title">ai_project.py</span>
-          </div>
-          <div class="code-body" id="code-body">
-            <div class="code-line"><span class="kw">from</span> <span class="mod">nxtwave_ai</span> <span class="kw">import</span> build</div>
-            <div class="code-line"></div>
-            <div class="code-line"><span class="cm"># Your first AI project</span></div>
-            <div class="code-line"><span class="fn">project</span> = build.<span class="fn">smart_assistant</span>(</div>
-            <div class="code-line">  &nbsp;&nbsp;domain=<span class="str">"your-interest"</span>,</div>
-            <div class="code-line">  &nbsp;&nbsp;time=<span class="str">"60 minutes"</span></div>
-            <div class="code-line">)</div>
-            <div class="code-line"></div>
-            <div class="code-line"><span class="fn">project</span>.deploy() <span class="cm"># ← you do this live</span></div>
-            <div class="code-line typing-line"><span class="cm"># Output: </span><span class="out" id="typing-out"></span><span class="cursor-blink">|</span></div>
-          </div>
-        </div>
-
-        <div class="output-bubble">
-          <span class="output-icon">✅</span>
-          <div>
-            <div class="output-label">Deployed</div>
-            <div class="output-val">Resume-ready AI project</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SOCIAL PROOF BAR ─── -->
-  <div class="social-bar">
-    <div class="social-bar-inner">
-      <div class="social-stat"><span class="stat-num" data-target="500">0</span><span class="stat-label"> target registrations</span></div>
-      <div class="sep"></div>
-      <div class="social-stat"><span class="stat-num" data-target="60">0</span><span class="stat-label"> minutes</span></div>
-      <div class="sep"></div>
-      <div class="social-stat"><span class="stat-num" data-target="1">0</span><span class="stat-label"> working project</span></div>
-      <div class="sep"></div>
-      <div class="social-stat"><span class="stat-num" data-target="0">0</span><span class="stat-label"> cost to you</span></div>
+    <div class="status-tags">
+      <span class="badge-tag">7-Day Growth Sprint</span>
+      <span class="badge-tag">₹2,000 Budget Cap</span>
+      <span class="badge-tag">Target: 500 Engineers</span>
     </div>
   </div>
 
-  <!-- ─── WHAT YOU BUILD ─── -->
+  <!-- ─── NAVIGATION ─── -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">▲</div>
+        <span>NxtWave <span style="font-weight:400; font-size: 0.95rem; color: var(--amber);">AI Workshop</span></span>
+      </a>
+      <div class="nav-menu">
+        <a href="#what-you-build" class="nav-link">Projects</a>
+        <a href="#comparison" class="nav-link">Why This Works</a>
+        <a href="#dashboard" class="nav-link">Campaign Dashboard</a>
+        <button class="nav-btn" onclick="openModal()">Build My AI Project →</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── HERO SECTION ─── -->
+  <section class="hero" id="hero">
+    <div class="hero-glow-blob hero-blob-1"></div>
+    <div class="hero-glow-blob hero-blob-2"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="hero-pill">
+          <span>🔥 Placement Season 2024-25 Special</span>
+          <span style="color:var(--cream-dim);">•</span>
+          <span id="live-seats-pill">Calculating spots…</span>
+        </div>
+
+        <h1 class="hero-title">
+          Build a Real <span class="gradient-text">AI Project</span> in 60 Minutes.
+        </h1>
+
+        <p class="hero-sub">
+          Stop watching passive tutorials. In one fast-paced session, build, test, and deploy an actual working AI application to GitHub that stands out on your placement resume.
+        </p>
+
+        <div class="hero-chips">
+          <div class="chip"><span class="chip-dot"></span> 100% Free Workshop</div>
+          <div class="chip"><span class="chip-dot"></span> Zero Prior ML Required</div>
+          <div class="chip"><span class="chip-dot"></span> Live GitHub Repository</div>
+          <div class="chip"><span class="chip-dot"></span> Verified Recruiter Proof</div>
+        </div>
+
+        <div class="hero-cta-group">
+          <button class="btn-primary" onclick="openModal()">
+            <span>Build My AI Project — Free</span>
+            <span>→</span>
+          </button>
+          <a href="#what-you-build" class="btn-ghost">
+            <span>Explore 3 Projects</span>
+            <span>↓</span>
+          </a>
+        </div>
+
+        <div class="urgency-strip">
+          <span>⚡</span>
+          <span id="hero-urgency-text">Only 500 spots available across 20+ engineering colleges.</span>
+        </div>
+      </div>
+
+      <!-- Hero Terminal Mock -->
+      <div class="hero-right">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">build_ai_project.py</div>
+            <button class="terminal-run-btn" onclick="runTerminalDemo()">▶ Run Demo</button>
+          </div>
+          <div class="terminal-body">
+            <p><span class="code-keyword">import</span> <span class="code-str">nxtwave_ai</span> <span class="code-keyword">as</span> <span class="code-func">ai</span></p>
+            <p><span class="code-comment"># Initialize 60-Minute AI Project Engine</span></p>
+            <p>project = <span class="code-func">ai.Project</span>(</p>
+            <p>&nbsp;&nbsp;title=<span class="code-str">"Placement Resume Screener"</span>,</p>
+            <p>&nbsp;&nbsp;model=<span class="code-str">"claude-3-haiku"</span>,</p>
+            <p>&nbsp;&nbsp;duration_mins=<span class="code-str">60</span></p>
+            <p>)</p>
+            <p><span class="code-comment"># Build, test, and ship to GitHub live</span></p>
+            <p>repo_url = project.<span class="code-func">deploy_to_github</span>()</p>
+            <div class="code-out-box" id="terminal-out-box">
+              <span id="terminal-out-text">Status: ⚡ Click 'Run Demo' to see live build execution output...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS PROOF BAR ─── -->
+  <div class="proof-bar">
+    <div class="container proof-grid">
+      <div class="proof-item">
+        <div class="proof-number" id="proof-regs">500</div>
+        <div class="proof-label">Target Final-Year Engineers</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">60</div>
+        <div class="proof-label">Minutes to Deployed Code</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">1</div>
+        <div class="proof-label">Working Resume-Ready Project</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-number">₹0</div>
+        <div class="proof-label">Completely Free Admission</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── WHAT YOU'LL BUILD SECTION ─── -->
   <section class="section" id="what-you-build">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">What You'll Build</div>
-        <h2 class="section-title">Not a tutorial. An actual project.</h2>
-        <p class="section-desc">In 60 minutes you walk away with a deployed, working AI app — not just notes.</p>
+        <span class="section-badge">Practical Engineering</span>
+        <h2 class="section-title">Choose What You'll Ship in 60 Minutes</h2>
+        <p class="section-desc">You don't listen to theory. You clone the starter repository, wire the AI pipeline, test it, and deploy a live link before the clock runs out.</p>
       </div>
 
-      <div class="project-cards">
-        <div class="project-card">
-          <div class="project-icon">🤖</div>
-          <div class="project-name">Smart Resume Screener</div>
-          <div class="project-desc">An AI tool that reads resumes and scores them against a job description. Interviewers use this. Now you've built one.</div>
-          <div class="project-tag">NLP + Python</div>
-        </div>
-        <div class="project-card featured">
-          <div class="project-badge">Most Popular</div>
-          <div class="project-icon">💬</div>
-          <div class="project-name">Domain Chatbot</div>
-          <div class="project-desc">A chatbot trained on any domain — your college, your industry, your interest. Shareable link. Works right away.</div>
-          <div class="project-tag">LLM + API</div>
-        </div>
-        <div class="project-card">
-          <div class="project-icon">📊</div>
-          <div class="project-name">AI Data Explainer</div>
-          <div class="project-desc">Paste any dataset. Ask it questions in plain English. Get answers with charts. No SQL, no pandas, just results.</div>
-          <div class="project-tag">LLM + Data</div>
-        </div>
+      <!-- Project Tabs -->
+      <div class="project-tabs">
+        <button class="project-tab-btn active" onclick="switchProjectTab(0)">1. Smart Resume Screener</button>
+        <button class="project-tab-btn" onclick="switchProjectTab(1)">2. Domain Mock Interview Bot</button>
+        <button class="project-tab-btn" onclick="switchProjectTab(2)">3. AI Data & Code Explainer</button>
       </div>
 
-      <div class="project-outcome">
-        <div class="outcome-item">
-          <div class="outcome-check">✓</div>
-          <div>GitHub link you can put on your resume <strong>today</strong></div>
+      <!-- Dynamic Project Card -->
+      <div class="project-display-card" id="project-card">
+        <div class="p-details">
+          <span class="p-details-tag" id="p-tag">NLP + ATS Scoring Engine</span>
+          <h3 class="p-details-title" id="p-title">Smart Resume ATS Screener</h3>
+          <p class="p-details-desc" id="p-desc">
+            An automated AI tool that parses candidate resumes, compares them against top tech Job Descriptions (JDs), and calculates an instant ATS match score with missing keyword recommendations.
+          </p>
+          <div class="p-stack-list" id="p-stack">
+            <span class="p-stack-chip">FastAPI</span>
+            <span class="p-stack-chip">LangChain</span>
+            <span class="p-stack-chip">OpenAI / Claude</span>
+            <span class="p-stack-chip">Streamlit UI</span>
+          </div>
+          <div class="p-resume-bullet">
+            <div class="p-bullet-label">Resume Bullet Point You Can Add:</div>
+            <span id="p-bullet">"Engineered and deployed an automated LLM-powered ATS resume screening engine using Python & FastAPI, achieving 94% precision in skill-gap detection across 20+ tech job descriptions."</span>
+          </div>
         </div>
-        <div class="outcome-item">
-          <div class="outcome-check">✓</div>
-          <div>Shareable deployed link (not just local code)</div>
-        </div>
-        <div class="outcome-item">
-          <div class="outcome-check">✓</div>
-          <div>Certificate of completion — name, project, date</div>
-        </div>
-        <div class="outcome-item">
-          <div class="outcome-check">✓</div>
-          <div>AI project evaluation report you can show recruiters</div>
+
+        <div class="project-visual-preview">
+          <div class="visual-top-bar">
+            <span>Live Terminal Preview</span>
+            <span class="live-pill">● DEPLOYED</span>
+          </div>
+          <div class="visual-content-box" id="p-mock-preview">
+            <p style="color:var(--coral-light); font-weight:700;">>>> Analyzing resume.pdf against "Fullstack SDE JD"...</p>
+            <p style="color:var(--cream-muted); margin: 6px 0;">[✓] Extracted: Python, Docker, React, PostgreSQL</p>
+            <p style="color:var(--amber); margin: 6px 0;">[!] Skill Gaps Detected: Redis, CI/CD GitHub Actions</p>
+            <p style="color:#4EEDB0; font-weight:700;">ATS Compatibility Score: 87.4% (Strong Shortlist)</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── WHY NOW ─── -->
-  <section class="section section-dark" id="why-now">
+  <!-- ─── COMPARISON TABLE: TUTORIAL HELL VS SHIP METHOD ─── -->
+  <section class="section section-darker" id="comparison">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Why This Matters Now</div>
-        <h2 class="section-title">Placements are brutal.<br/>AI projects aren't optional anymore.</h2>
+        <span class="section-badge">The Harsh Reality</span>
+        <h2 class="section-title">The Tutorial Trap vs The 60-Minute Ship Method</h2>
+        <p class="section-desc">Why 90% of final-year engineering resumes get rejected by tech recruiters in 10 seconds.</p>
       </div>
 
-      <div class="insight-grid">
-        <div class="insight-card">
-          <div class="insight-stat">74%</div>
-          <div class="insight-text">of recruiters at top tech companies say they <strong>actively look for AI/ML project experience</strong> even in non-ML roles.</div>
-          <div class="insight-source">Source: LinkedIn Talent Insights, 2024</div>
-        </div>
-        <div class="insight-card">
-          <div class="insight-stat">3.2x</div>
-          <div class="insight-text">Students with an AI project on GitHub get <strong>3.2x more recruiter profile views</strong> than those without.</div>
-          <div class="insight-source">Source: GitHub Octoverse, 2024</div>
-        </div>
-        <div class="insight-card">
-          <div class="insight-stat">60 min</div>
-          <div class="insight-text">That's all it takes. Most students spend weeks on courses and never ship. We fix that in <strong>one session.</strong></div>
-          <div class="insight-source">NxtWave workshop format</div>
-        </div>
-      </div>
-
-      <div class="objection-block">
-        <div class="objection-title">The objections we hear — and our honest answers:</div>
-        <div class="objections">
-          <div class="objection-item">
-            <div class="obj-q">❝ I don't know Python / ML ❞</div>
-            <div class="obj-a">→ You don't need to. We use AI tools that do the heavy lifting. You focus on building logic and shipping.</div>
-          </div>
-          <div class="objection-item">
-            <div class="obj-q">❝ Another useless webinar ❞</div>
-            <div class="obj-a">→ Fair. But you leave with a GitHub link and a deployed app, not a PDF certificate for watching slides.</div>
-          </div>
-          <div class="objection-item">
-            <div class="obj-q">❝ I can watch YouTube ❞</div>
-            <div class="obj-a">→ YouTube doesn't push you to deploy. We do. 60 minutes, one project, shipped.</div>
-          </div>
-          <div class="objection-item">
-            <div class="obj-q">❝ Is it really free? ❞</div>
-            <div class="obj-a">→ Yes. No card, no trial, no catch. NxtWave's mission is to make tech education accessible.</div>
-          </div>
-        </div>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Evaluation Parameter</th>
+              <th>The Typical Student Approach</th>
+              <th class="col-nxtwave">The NxtWave 60-Minute Workshop</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Project Artifact</strong></td>
+              <td class="col-trap">Generic calculator or clone watched on YouTube</td>
+              <td class="col-nxtwave">Original, deployed AI application with live GitHub URL</td>
+            </tr>
+            <tr>
+              <td><strong>Recruiter Reaction</strong></td>
+              <td class="col-trap">"I've seen this same project 500 times this week"</td>
+              <td class="col-nxtwave">"This student actually knows how to integrate and deploy AI"</td>
+            </tr>
+            <tr>
+              <td><strong>Time Commitment</strong></td>
+              <td class="col-trap">30-hour course that 85% of students abandon halfway</td>
+              <td class="col-nxtwave">60 focused minutes. Start to finish. Deployed.</td>
+            </tr>
+            <tr>
+              <td><strong>Cost</strong></td>
+              <td class="col-trap">₹2,000 – ₹15,000 for generic certifications</td>
+              <td class="col-nxtwave">100% Free with zero credit card or hidden trials</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- ─── REGISTRATION CTA ─── -->
-  <section class="section cta-section" id="register-section">
-    <div class="container">
-      <div class="cta-box">
-        <div class="cta-glow"></div>
-        <div class="cta-inner">
-          <h2 class="cta-title">Ready to build your first AI project?</h2>
-          <p class="cta-sub">Free. 60 minutes. One working project. Register now — spots are limited.</p>
-          <button class="btn-primary btn-lg" id="register-btn" onclick="openModal('register')">
-            Build My AI Project — It's Free →
-          </button>
-          <div class="cta-meta">No credit card · No install · Just show up</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── REFERRAL / SHARE SECTION (shown post-registration) ─── -->
+  <!-- ─── REFERRAL HUB (SHOWN POST-REGISTRATION) ─── -->
   <section class="section" id="referral-section" style="display:none;">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">You're In! 🎉</div>
-        <h2 class="section-title">Invite friends. Unlock rewards.</h2>
-        <p class="section-desc">Every friend you bring in unlocks something valuable for your placement prep.</p>
+        <span class="section-badge">Registration Confirmed 🎉</span>
+        <h2 class="section-title">Your Priority Seat is Locked</h2>
+        <p class="section-desc">Invite college peers to unlock exclusive placement-accelerator assets.</p>
       </div>
 
-      <div class="referral-card">
-        <div class="ref-user-info">
-          <div class="ref-name" id="ref-display-name">Hey!</div>
-          <div class="ref-code-wrap">
-            <div class="ref-code-label">Your referral link</div>
-            <div class="ref-link-box">
-              <span class="ref-link-text" id="ref-link-display">Loading…</span>
-              <button class="copy-btn" id="copy-link-btn" onclick="copyRefLink()">Copy</button>
-            </div>
+      <div class="referral-hub">
+        <div class="ref-hero-banner">
+          <div class="ref-greeting">
+            <h3 id="ref-user-name">Welcome aboard, Engineer!</h3>
+            <p>Share your unique referral link with your WhatsApp study groups and college batch.</p>
+          </div>
+          <div class="ref-code-box">
+            <span class="ref-link-url" id="ref-link-text">Generating link...</span>
+            <button class="copy-btn" onclick="copyReferralLink()">Copy Link</button>
           </div>
         </div>
 
-        <div class="ref-progress-wrap">
-          <div class="ref-progress-title">Your referral progress</div>
-          <div class="milestone-track">
-            <div class="milestone" id="m1">
-              <div class="milestone-circle"><span class="m-num">1</span></div>
-              <div class="milestone-label">Priority seat confirmation</div>
-            </div>
-            <div class="milestone-line"></div>
-            <div class="milestone" id="m3">
-              <div class="milestone-circle"><span class="m-num">3</span></div>
-              <div class="milestone-label">AI project evaluation report</div>
-            </div>
-            <div class="milestone-line"></div>
-            <div class="milestone" id="m5">
-              <div class="milestone-circle"><span class="m-num">5</span></div>
-              <div class="milestone-label">Resume review by NxtWave mentor</div>
-            </div>
+        <h4 style="font-size: 1.1rem; color: var(--cream); margin-bottom: 14px;">Career Milestone Roadmap:</h4>
+        <div class="milestones-timeline">
+          <div class="milestone-card unlocked" id="ms-1">
+            <span class="milestone-badge-top">Milestone 1 (1 Referral)</span>
+            <div class="milestone-title">Fast-Track Seat Confirmation</div>
+            <div class="milestone-desc">Guaranteed live workshop seat + instant starter code repository.</div>
+            <div class="milestone-status-tag">✓ UNLOCKED BY DEFAULT</div>
           </div>
-          <div class="ref-count-display">
-            <span id="ref-count-current">0</span> friends referred so far
+          <div class="milestone-card" id="ms-3">
+            <span class="milestone-badge-top">Milestone 2 (3 Referrals)</span>
+            <div class="milestone-title">AI Project Recruiter Scorecard</div>
+            <div class="milestone-desc">Automated code evaluation and ATS placement scorecard to showcase recruiters.</div>
+            <div class="milestone-status-tag" id="ms-3-status">🔒 3 Referrals Needed</div>
+          </div>
+          <div class="milestone-card" id="ms-5">
+            <span class="milestone-badge-top">Milestone 3 (5 Referrals)</span>
+            <div class="milestone-title">1-on-1 Mentor Resume Review</div>
+            <div class="milestone-desc">Detailed feedback on your resume and GitHub profile by a senior tech mentor.</div>
+            <div class="milestone-status-tag" id="ms-5-status">🔒 5 Referrals Needed</div>
           </div>
         </div>
 
-        <div class="share-actions">
-          <div class="share-title">Share via</div>
-          <div class="share-btns">
-            <button class="share-btn whatsapp" id="share-whatsapp" onclick="shareWhatsApp()">
-              <span>WhatsApp</span>
+        <div style="margin-top: 24px;">
+          <p style="font-size:0.85rem; color:var(--cream-muted); margin-bottom:10px;">1-Tap Instant Sharing:</p>
+          <div class="share-channels-grid">
+            <button class="share-action-btn share-whatsapp" onclick="shareWhatsApp()">
+              <span>💬 Share to WhatsApp</span>
             </button>
-            <button class="share-btn linkedin" onclick="shareLinkedIn()">
-              <span>LinkedIn</span>
+            <button class="share-action-btn share-linkedin" onclick="shareLinkedIn()">
+              <span>💼 Share on LinkedIn</span>
             </button>
-            <button class="share-btn telegram" onclick="shareTelegram()">
-              <span>Telegram</span>
+            <button class="share-action-btn share-telegram" onclick="shareTelegram()">
+              <span>✈️ Share to Telegram</span>
             </button>
           </div>
         </div>
@@ -295,263 +297,194 @@
     </div>
   </section>
 
-  <!-- ─── GROWTH DASHBOARD (admin view) ─── -->
-  <section class="section section-dark" id="dashboard-section">
+  <!-- ─── LIVE CAMPAIGN & GROWTH DASHBOARD ─── -->
+  <section class="section section-darker" id="dashboard">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Live Campaign Dashboard</div>
-        <h2 class="section-title">500-Registration Tracker</h2>
-        <p class="section-desc">Real-time view of the growth engine — every metric that matters.</p>
+        <span class="section-badge">Live Growth Telemetry</span>
+        <h2 class="section-title">500-Registration Campaign Command Center</h2>
+        <p class="section-desc">Real-time telemetry showing channel performance, viral loop compounding (K-factor), and unit economics.</p>
       </div>
 
-      <div class="dashboard-grid">
-        <!-- Progress toward goal -->
-        <div class="dash-card dash-card-wide">
-          <div class="dash-card-title">Campaign Progress</div>
-          <div class="progress-toward-goal">
-            <div class="goal-numbers">
-              <div class="goal-current"><span id="dash-registered">0</span> <span class="goal-unit">registered</span></div>
-              <div class="goal-target">Goal: <strong>500</strong></div>
+      <!-- KPI Cards -->
+      <div class="dash-kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">Total Registrations</div>
+          <div class="kpi-value" id="kpi-total">84</div>
+          <div class="kpi-sub">Target: 500 Final-Year Engineers</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Viral K-Factor</div>
+          <div class="kpi-value" id="kpi-kfactor">0.34</div>
+          <div class="kpi-sub">Target: &gt;0.30 Viral Loop</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Cost Per Registration (CPR)</div>
+          <div class="kpi-value" id="kpi-cpr">₹2.33</div>
+          <div class="kpi-sub">Budget Cap: ₹2,000 Total</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Spots Remaining</div>
+          <div class="kpi-value" id="kpi-spots">416</div>
+          <div class="kpi-sub">Cap strictly enforced</div>
+        </div>
+      </div>
+
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-main-grid">
+        <!-- Channel Attribution Box -->
+        <div class="dash-box">
+          <div class="dash-box-title">
+            <span>Channel Attribution Breakdown</span>
+            <span style="font-size:0.8rem; color:var(--amber);" id="dash-percentage">17% of Goal</span>
+          </div>
+
+          <div class="goal-progress-wrap">
+            <div class="goal-progress-header">
+              <span style="font-size:0.85rem; color:var(--cream-muted);">Progress toward 500 Goal</span>
+              <span style="font-size:0.85rem; font-weight:700; color:var(--amber);" id="progress-fraction">84 / 500</span>
             </div>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar-track">
-                <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
-              </div>
-              <div class="progress-pct" id="progress-pct">0%</div>
+            <div class="goal-progress-bar">
+              <div class="goal-progress-fill" id="goal-bar-fill" style="width: 17%;"></div>
             </div>
-            <div class="channel-breakdown">
-              <div class="channel-row" id="ch-whatsapp">
-                <div class="ch-label">WhatsApp Communities</div>
-                <div class="ch-bar-wrap"><div class="ch-bar" style="background:#25D366;"></div></div>
-                <div class="ch-count" id="cnt-whatsapp">0</div>
-              </div>
-              <div class="channel-row" id="ch-referral">
-                <div class="ch-label">Peer Referral</div>
-                <div class="ch-bar-wrap"><div class="ch-bar" style="background:#7C3AED;"></div></div>
-                <div class="ch-count" id="cnt-referral">0</div>
-              </div>
-              <div class="channel-row" id="ch-linkedin">
-                <div class="ch-label">LinkedIn + Clubs</div>
-                <div class="ch-bar-wrap"><div class="ch-bar" style="background:#0A66C2;"></div></div>
-                <div class="ch-count" id="cnt-linkedin">0</div>
-              </div>
-              <div class="channel-row" id="ch-direct">
-                <div class="ch-label">Direct / Organic</div>
-                <div class="ch-bar-wrap"><div class="ch-bar" style="background:#F59E0B;"></div></div>
-                <div class="ch-count" id="cnt-direct">0</div>
-              </div>
-            </div>
+          </div>
+
+          <div class="channel-row">
+            <span class="channel-name">WhatsApp Ambassadors</span>
+            <div class="channel-meter-bg"><div class="channel-meter-fill" id="bar-wa" style="width: 45%; background: var(--coral);"></div></div>
+            <span class="channel-count" id="count-wa">42 / 228</span>
+          </div>
+          <div class="channel-row">
+            <span class="channel-name">Peer Referrals (Viral)</span>
+            <div class="channel-meter-bg"><div class="channel-meter-fill" id="bar-ref" style="width: 25%; background: var(--amber);"></div></div>
+            <span class="channel-count" id="count-ref">22 / 77</span>
+          </div>
+          <div class="channel-row">
+            <span class="channel-name">LinkedIn &amp; Tech Clubs</span>
+            <div class="channel-meter-bg"><div class="channel-meter-fill" id="bar-li" style="width: 15%; background: #38BDF8;"></div></div>
+            <span class="channel-count" id="count-li">12 / 96</span>
+          </div>
+          <div class="channel-row">
+            <span class="channel-name">Instagram Micro-Reel</span>
+            <div class="channel-meter-bg"><div class="channel-meter-fill" id="bar-ig" style="width: 10%; background: #EC4899;"></div></div>
+            <span class="channel-count" id="count-ig">5 / 38</span>
+          </div>
+          <div class="channel-row">
+            <span class="channel-name">Hackathon Communities</span>
+            <div class="channel-meter-bg"><div class="channel-meter-fill" id="bar-hack" style="width: 5%; background: #A855F7;"></div></div>
+            <span class="channel-count" id="count-hack">3 / 67</span>
           </div>
         </div>
 
-        <!-- Key metrics -->
-        <div class="dash-card">
-          <div class="dash-card-title">Key Metrics</div>
-          <div class="metric-list">
-            <div class="metric-row">
-              <div class="metric-name">Total Reach</div>
-              <div class="metric-val" id="m-reach">0</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-name">Click-Through Rate</div>
-              <div class="metric-val" id="m-ctr">—</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-name">Reg. Conversion</div>
-              <div class="metric-val" id="m-conv">—</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-name">Cost / Registration</div>
-              <div class="metric-val" id="m-cpr">—</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-name">K-Factor</div>
-              <div class="metric-val" id="m-kfactor">—</div>
-            </div>
-            <div class="metric-row">
-              <div class="metric-name">Days Remaining</div>
-              <div class="metric-val" id="m-days">7</div>
-            </div>
+        <!-- Leaderboard Box -->
+        <div class="dash-box">
+          <div class="dash-box-title">
+            <span>Top Campus Ambassadors</span>
+            <span style="font-size:0.8rem; color:var(--cream-dim);">Updated Live</span>
           </div>
-        </div>
-
-        <!-- Top referrers -->
-        <div class="dash-card">
-          <div class="dash-card-title">Top Ambassadors</div>
-          <div class="leaderboard" id="leaderboard">
-            <div class="lb-empty">Registrations will appear here</div>
-          </div>
-        </div>
-
-        <!-- Budget tracker -->
-        <div class="dash-card dash-card-wide">
-          <div class="dash-card-title">Budget Tracker — ₹2,000 Total</div>
-          <div class="budget-grid">
-            <div class="budget-item">
-              <div class="budget-cat">WhatsApp / Telegram Boosts</div>
-              <div class="budget-amt">₹800</div>
-              <div class="budget-bar" style="--pct: 40%;"></div>
+          <div class="leaderboard-list" id="leaderboard-container">
+            <div class="leaderboard-item">
+              <span class="lb-rank">🥇</span>
+              <div class="lb-info">
+                <div class="lb-name">Aarav Sharma</div>
+                <div class="lb-college">NIT Warangal</div>
+              </div>
+              <span class="lb-count">8 Invited</span>
             </div>
-            <div class="budget-item">
-              <div class="budget-cat">Ambassador Incentives (top 5)</div>
-              <div class="budget-amt">₹600</div>
-              <div class="budget-bar" style="--pct: 30%;"></div>
+            <div class="leaderboard-item">
+              <span class="lb-rank">🥈</span>
+              <div class="lb-info">
+                <div class="lb-name">Sneha Reddy</div>
+                <div class="lb-college">VIT Vellore</div>
+              </div>
+              <span class="lb-count">6 Invited</span>
             </div>
-            <div class="budget-item">
-              <div class="budget-cat">Instagram Micro-creator (1 reel)</div>
-              <div class="budget-amt">₹400</div>
-              <div class="budget-bar" style="--pct: 20%;"></div>
+            <div class="leaderboard-item">
+              <span class="lb-rank">🥉</span>
+              <div class="lb-info">
+                <div class="lb-name">Rohan Deshmukh</div>
+                <div class="lb-college">COEP Pune</div>
+              </div>
+              <span class="lb-count">4 Invited</span>
             </div>
-            <div class="budget-item">
-              <div class="budget-cat">Contingency</div>
-              <div class="budget-amt">₹200</div>
-              <div class="budget-bar" style="--pct: 10%;"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experiment tracker -->
-        <div class="dash-card dash-card-wide">
-          <div class="dash-card-title">Live A/B Experiment Tracker</div>
-          <div class="experiment-table-wrap">
-            <table class="exp-table">
-              <thead>
-                <tr>
-                  <th>Experiment</th>
-                  <th>Variant A</th>
-                  <th>Variant B</th>
-                  <th>Metric</th>
-                  <th>Status</th>
-                  <th>Winner</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Headline Copy</td>
-                  <td>"Learn AI in 60 min"</td>
-                  <td>"Build AI Project in 60 min"</td>
-                  <td>Registration rate</td>
-                  <td><span class="exp-status running">Running</span></td>
-                  <td class="exp-winner" id="exp1-winner">—</td>
-                </tr>
-                <tr>
-                  <td>CTA Button</td>
-                  <td>"Register Free"</td>
-                  <td>"Build My AI Project"</td>
-                  <td>CTR</td>
-                  <td><span class="exp-status running">Running</span></td>
-                  <td class="exp-winner" id="exp2-winner">—</td>
-                </tr>
-                <tr>
-                  <td>Referral Incentive</td>
-                  <td>Certificate only</td>
-                  <td>Project evaluation report</td>
-                  <td>Share rate</td>
-                  <td><span class="exp-status running">Running</span></td>
-                  <td class="exp-winner" id="exp3-winner">—</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
 
-      <!-- Simulate button for demo -->
-      <div class="simulate-wrap">
-        <button class="btn-simulate" id="sim-btn" onclick="simulateCampaign()">▶ Simulate Campaign Growth (Demo)</button>
-        <p class="simulate-note">This simulates how the dashboard fills with real campaign data over 7 days.</p>
+      <!-- Simulation Controller Bar -->
+      <div class="sim-controls-bar">
+        <div class="sim-text">
+          <h4>Interactive 7-Day Growth Simulation</h4>
+          <p>Click below to simulate the full 7-day compounding viral flywheel and watch how 516 registrations are acquired with ₹1,200 spent.</p>
+        </div>
+        <button class="btn-simulate" id="simulate-btn" onclick="runCampaignSimulation()">
+          ▶ Run 7-Day Campaign Simulation
+        </button>
       </div>
     </div>
   </section>
 
   <!-- ─── REGISTRATION MODAL ─── -->
-  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
-    <div class="modal" id="modal" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <div id="modal-register">
-        <div class="modal-header">
-          <h2 class="modal-title">Register for the Workshop</h2>
-          <p class="modal-sub">Free · 60 minutes · Walk away with an AI project</p>
-        </div>
-        <form id="reg-form" onsubmit="handleRegistration(event)">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" placeholder="Rahul Sharma" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="rahul@college.edu" required />
-          </div>
-          <div class="form-group">
-            <label for="college">College *</label>
-            <input type="text" id="college" name="college" placeholder="IIT Delhi / VIT / BITS…" required />
-          </div>
-          <div class="form-group">
-            <label for="branch">Branch</label>
-            <select id="branch" name="branch">
-              <option value="">Select branch</option>
-              <option value="CSE">Computer Science (CSE)</option>
-              <option value="ECE">Electronics (ECE)</option>
-              <option value="IT">Information Technology (IT)</option>
-              <option value="MECH">Mechanical</option>
-              <option value="CIVIL">Civil</option>
-              <option value="EEE">Electrical (EEE)</option>
-              <option value="OTHER">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="phone">WhatsApp Number *</label>
-            <input type="tel" id="phone" name="phone" placeholder="9876543210" required />
-          </div>
+  <div class="modal-overlay" id="registration-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      <h3 class="modal-title">Lock Your Free Seat</h3>
+      <p class="modal-sub">Free 60-Minute AI Project Workshop. Limited to 500 spots.</p>
 
-          <!-- Hidden ref field populated from URL -->
-          <input type="hidden" id="referred_by" name="referred_by" value="" />
-          <input type="hidden" id="utm_source" name="utm_source" value="" />
-
-          <button type="submit" class="btn-primary btn-full" id="submit-btn">
-            Build My AI Project — Register Free →
-          </button>
-          <div class="form-note">By registering, you agree to receive workshop details on WhatsApp/email.</div>
-        </form>
-      </div>
-
-      <!-- Success state -->
-      <div id="modal-success" style="display:none;">
-        <div class="success-icon">🎉</div>
-        <h2 class="modal-title">You're registered!</h2>
-        <p class="modal-sub" id="success-msg">See you at the workshop.</p>
-        <div class="ref-code-success">
-          <div class="ref-code-label">Your referral link — invite friends, unlock rewards</div>
-          <div class="ref-link-box">
-            <span class="ref-link-text" id="modal-ref-link">Loading…</span>
-            <button class="copy-btn" onclick="copyModalRefLink()">Copy</button>
-          </div>
+      <form id="workshop-reg-form" onsubmit="submitRegistration(event)">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" class="form-input" placeholder="e.g. Rahul Sharma" required />
         </div>
-        <div class="share-actions" style="margin-top:1.5rem;">
-          <div class="share-btns">
-            <button class="share-btn whatsapp" onclick="shareWhatsApp()">WhatsApp</button>
-            <button class="share-btn linkedin" onclick="shareLinkedIn()">LinkedIn</button>
-            <button class="share-btn telegram" onclick="shareTelegram()">Telegram</button>
-          </div>
+
+        <div class="form-group">
+          <label for="email">College Email ID *</label>
+          <input type="email" id="email" class="form-input" placeholder="rahul@college.edu" required />
         </div>
-        <button class="btn-ghost btn-full" style="margin-top:1rem;" onclick="closeModal(); showReferralSection();">
-          View My Referral Dashboard →
+
+        <div class="form-group">
+          <label for="mobile">WhatsApp Mobile Number *</label>
+          <input type="tel" id="mobile" class="form-input" placeholder="9876543210" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required />
+        </div>
+
+        <div class="form-group">
+          <label for="college">College / University *</label>
+          <input type="text" id="college" class="form-input" placeholder="e.g. IIT Delhi, VIT, NIT Trichy" required />
+        </div>
+
+        <div class="form-group">
+          <label for="gradYear">Year of Graduation *</label>
+          <select id="gradYear" class="form-select" required>
+            <option value="2025" selected>2025 (Final Year)</option>
+            <option value="2026">2026 (Pre-Final Year)</option>
+            <option value="2024">2024 (Recent Graduate)</option>
+          </select>
+        </div>
+
+        <!-- Hidden Tracking Inputs -->
+        <input type="hidden" id="referredBy" value="" />
+        <input type="hidden" id="utmSource" value="" />
+
+        <button type="submit" class="btn-primary form-btn-submit" id="submit-btn">
+          Confirm My Free Registration →
         </button>
-      </div>
+
+        <p class="form-privacy-note">
+          🔒 Zero spam. You will only receive the workshop link and starter repo details.
+        </p>
+      </form>
     </div>
   </div>
 
+  <!-- Toast Notification -->
+  <div class="toast" id="toast-notification">Notification message</div>
+
   <!-- ─── FOOTER ─── -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <span class="logo-dot"></span>
-        <span>NxtWave</span>
-      </div>
-      <div class="footer-text">
-        NxtWave Growth Intern Challenge Submission — Growth System Prototype<br/>
-        <span style="color: var(--muted); font-size: 0.75rem;">This is a simulation. Projected data shown for demonstration.</span>
-      </div>
+    <div class="container">
+      <div class="footer-logo">▲ NxtWave Growth Challenge</div>
+      <p>A data-driven, measurable growth prototype designed to acquire 500 final-year engineering students for ₹2,000.</p>
+      <p style="font-size:0.75rem; color:var(--cream-dim); margin-top:8px;">Built for Round 1 Evaluation • Vanilla Fullstack Architecture (Node.js/Express + Warm UI)</p>
     </div>
   </footer>
 

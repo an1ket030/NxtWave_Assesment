@@ -2,3 +2,4 @@ answers.md
 answrs.md
 *.tmp
 scratch/
+node_modules/
