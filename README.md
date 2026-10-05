@@ -18,16 +18,17 @@ This is not just a static landing page — it is a **complete, fullstack registr
 
 ---
 
-## 🎨 Warm Sunset Design Palette
+## 🎨 Warm Earthy Luxury Design Palette
 
-The visual presentation has been completely overhauled with a tailored warm sunset color architecture:
+The visual presentation uses a tailored warm earthy palette inspired by cozy natural tones:
 
 | Token | Hex Value | Role & Usage |
 |-------|-----------|--------------|
-| **Deep Crimson** | `#8B2346` | Background glow layers, ambient mesh gradients, milestone card tints |
-| **Coral Orange** | `#F05A28` | Primary CTA buttons, focus rings, progress bars, section tags |
-| **Golden Amber** | `#FFBE5C` | Telemetry KPI highlights, code syntax keywords, urgency strips, badges |
-| **Warm Cream** | `#FFE8B2` | High-contrast typography, body text, clean card surface highlights |
+| **Deep Espresso** | `#2A1C16` | Luxurious dark background base, dark surface cards, and deep contrast layers |
+| **Warm Sienna** | `#6C3720` | Ambient mesh glow layers, card borders, and deep accent highlights |
+| **Rich Caramel** | `#A67149` | Primary CTA buttons, progress bar fills, active pill highlights, and hover states |
+| **Warm Sand** | `#BDA389` | Secondary buttons, subtle borders, tech stack chips, and secondary labels |
+| **Warm Linen Cream** | `#E6D4B9` | High-contrast typography, crisp headings, and luminous foreground text |
 
 ---
 
